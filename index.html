@@ -1,52 +1,69 @@
-<style>
-    /* ... existing styles ... */
+<section id="quote-form" class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-4 bg-brand text-white p-5 d-flex flex-column justify-content-center">
+                            <h3 class="fw-bold mb-4">Let's Create.</h3>
+                            <p class="small opacity-75">Tell us about your project, whether it's custom Panther gear, business apparel, or a brand new logo design.</p>
+                            <hr class="my-4 opacity-25">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle me-2 text-brand-accent"></i>
+                                <span class="small">Fast Turnaround</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle me-2 text-brand-accent"></i>
+                                <span class="small">Local Belgrade Pickup</span>
+                            </div>
+                        </div>
 
-    /* Hero Section with Larger Logo */
-    .hero-section {
-        background: linear-gradient(rgba(32, 56, 63, 0.85), rgba(32, 56, 63, 0.7)), 
-                    url('https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?auto=format&fit=crop&w=1920&q=80');
-        background-size: cover;
-        background-position: center;
-        min-height: 85vh; /* Increased height to fit larger logo */
-        display: flex;
-        align-items: center;
-        color: white;
-        text-align: center;
-        padding: 60px 0;
-    }
-
-    .hero-logo { 
-        max-width: 550px; /* Increased from 350px */
-        width: 90%;       /* Ensures it stays responsive on mobile */
-        margin-bottom: 2.5rem; 
-        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-        animation: float 6s ease-in-out infinite; /* Smooth floating effect */
-    }
-
-    /* Animation for the Logo */
-    @keyframes float {
-        0% { transform: translatey(0px); }
-        50% { transform: translatey(-15px); }
-        100% { transform: translatey(0px); }
-    }
-
-    /* Adjusting text for better balance with large logo */
-    .hero-section h2 {
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-</style>
-
-<header class="hero-section">
-    <div class="container">
-        <img src="logo-main.png" alt="406 Nation Logo" class="hero-logo">
-        
-        <div class="mt-4">
-            <h2 class="display-5">Belgrade Pride Since 2007</h2>
-            <p class="lead mb-5 opacity-75 fs-4">Custom Apparel • Personalized Hats • Community Spirit</p>
-            <a href="#contact" class="btn btn-brand btn-lg shadow-lg px-5 py-3">Get a Custom Quote</a>
+                        <div class="col-md-8 p-5 bg-white">
+                            <h2 class="fw-bold text-brand mb-4">Request a Quote</h2>
+                            
+                            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-muted text-uppercase">Name</label>
+                                        <input type="text" name="name" class="form-control border-0 bg-light p-3" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-muted text-uppercase">Email</label>
+                                        <input type="email" name="email" class="form-control border-0 bg-light p-3" placeholder="email@example.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold text-muted text-uppercase">Service Needed</label>
+                                        <select name="service" class="form-select border-0 bg-light p-3">
+                                            <option selected>Custom Apparel Printing</option>
+                                            <option>Logo Design for Small Business</option>
+                                            <option>Personalized Hats/Tumblers</option>
+                                            <option>Panther Pride Bulk Order</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold text-muted text-uppercase">Project Details</label>
+                                        <textarea name="message" class="form-control border-0 bg-light p-3" rows="4" placeholder="Tell us about quantities, colors, or your design ideas..." required></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-brand w-100 py-3 shadow">Send Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</header>
+</section>
+
+<style>
+    /* Add this to your existing <style> section */
+    .text-brand-accent { color: #d4a373; }
+    .form-control:focus, .form-select:focus {
+        background-color: #fff !important;
+        box-shadow: 0 0 0 0.25rem rgba(32, 56, 63, 0.1);
+        border: 1px solid var(--brand-main) !important;
+    }
+</style>
