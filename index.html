@@ -3,145 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>406 Nation | Belgrade Custom Apparel & Panther Pride</title>
+    <title>406 Nation | Belgrade Custom Apparel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --brand-main: #20383f; /* Your Logo Color */
+            --brand-main: #20383f; /* Using your specific logo color */
             --brand-accent: #d4a373;
-            --brand-light: #f4f7f8;
+            --brand-light: #f8f9fa;
         }
 
         body { font-family: 'Inter', sans-serif; color: #333; }
         
-        .bg-brand { background-color: var(--brand-main) !important; }
-        .text-brand { color: var(--brand-main) !important; }
-        
-        /* Hero Section */
+        /* Nav Logo Styling */
+        .navbar-brand img { height: 50px; width: auto; }
+        .navbar { background-color: var(--brand-main) !important; padding: 0.5rem 0; }
+
+        /* Hero Section with Main Logo */
         .hero-section {
-            background: linear-gradient(rgba(32, 56, 63, 0.8), rgba(32, 56, 63, 0.7)), 
+            background: linear-gradient(rgba(32, 56, 63, 0.85), rgba(32, 56, 63, 0.7)), 
                         url('https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             color: white;
+            text-align: center;
         }
+        .hero-logo { max-width: 350px; width: 100%; margin-bottom: 2rem; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); }
 
-        .bio-text { line-height: 1.8; font-size: 1.1rem; }
-        .highlight-box {
-            border-left: 5px solid var(--brand-main);
-            padding-left: 20px;
-            font-style: italic;
-            margin: 20px 0;
+        .btn-brand { 
+            background-color: #fff; 
+            color: var(--brand-main); 
+            border: none;
+            padding: 12px 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
+        .btn-brand:hover { background-color: var(--brand-light); transform: translateY(-3px); }
 
-        /* Contact Cards */
+        /* About Section */
+        .bio-card { border: none; border-left: 5px solid var(--brand-main); background: #fdfdfd; }
+        
+        /* Contact/Socials */
         .contact-card {
             border: none;
-            border-radius: 12px;
-            transition: 0.3s;
+            border-radius: 15px;
             background: var(--brand-light);
-            text-decoration: none;
+            transition: 0.3s;
         }
-        .contact-card:hover {
-            transform: translateY(-5px);
-            background: #fff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+        .contact-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .social-icon { font-size: 2.5rem; color: var(--brand-main); margin-bottom: 1rem; }
 
-        footer { background: #16262b; color: #fff; padding: 3rem 0; }
-        footer a { color: #fff; text-decoration: none; }
+        footer { background: #16262b; color: #fff; padding: 4rem 0; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">406 NATION</a>
+            <a class="navbar-brand" href="#">
+                <img src="logo-nav.png" alt="406 Nation Nav Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Our Story</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light btn-sm" href="https://www.instagram.com/406.nation/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
+    <header class="hero-section">
         <div class="container">
-            <h1 class="display-3 fw-bold">Belgrade Born. Local Grown.</h1>
-            <p class="lead mb-4">Quality Custom Apparel & Community Pride</p>
-            <a href="#contact" class="btn btn-light btn-lg px-4 fw-bold text-brand shadow">Get A Quote</a>
+            <img src="logo-main.png" alt="406 Nation Logo" class="hero-logo animate__animated animate__fadeIn">
+            <h2 class="display-6 fw-light">Belgrade Pride Since 2007</h2>
+            <p class="lead mb-5 opacity-75">Custom Apparel • Personalized Hats • Community Spirit</p>
+            <a href="#contact" class="btn btn-brand btn-lg shadow">Get a Custom Quote</a>
         </div>
     </header>
 
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 mt-5">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h2 class="fw-bold text-brand mb-4">About 406 Nation</h2>
-                    <div class="bio-text">
-                        <p>We are a family-owned business that has proudly called <strong>Belgrade home since 2007</strong>. With Jena hailing from Bozeman and our four kids attending local schools, we are deeply connected to the heart of our community.</p>
-                        
-                        <div class="highlight-box">
-                            "In 2023, we realized there was a need—locals had limited access to Panther Pride and Belgrade-themed merchandise outside of school events."
-                        </div>
-
-                        <p>That's when 406 Nation was born. Opening in July of 2024, we set out to create a place where anyone could find high-quality, custom apparel that proudly represents our local pride.</p>
-                        
-                        <p>From fun designs for family adventures to professional gear for businesses, we offer custom apparel, personalized hats, and tumblers for everyone. Our goal is to foster a spirit of unity and collaboration within our community.</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold text-brand mb-4">Born from Panther Pride</h2>
+                    <p class="lead">406 Nation is a family-owned business that has proudly called Belgrade home since 2007.</p>
+                    <p>After Homecoming weekend 2023, we realized our community needed better access to Belgrade-themed merchandise. We opened our doors in July 2024 to provide high-quality, custom apparel that reflects the heart of the 406.</p>
+                    <div class="card bio-card p-4 shadow-sm mb-4">
+                        <p class="mb-0">"Our goal is to provide top-quality products that not only look great but also reflect the spirit of our community."</p>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <div class="p-5 rounded-circle bg-light border d-inline-block shadow-sm">
-                        <h4 class="fw-bold text-brand mb-0">Est. 2024</h4>
-                        <p class="small text-muted mb-0">Belgrade, MT</p>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="p-4 border rounded text-center bg-light">
+                                <i class="fas fa-tshirt mb-2 text-brand d-block fs-3"></i>
+                                <strong>Apparel</strong>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-4 border rounded text-center bg-light">
+                                <i class="fas fa-hat-wizard mb-2 text-brand d-block fs-3"></i>
+                                <strong>Hats</strong>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-4 border rounded text-center bg-light">
+                                <i class="fas fa-users mb-2 text-brand d-block fs-3"></i>
+                                <strong>Community Focused</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="py-5 bg-white">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="fw-bold text-brand h1">Let's Work Together</h2>
-                <p class="text-muted">Reach out for custom orders or community partnerships.</p>
+                <h2 class="fw-bold text-brand">Connect With the Nation</h2>
+                <p class="text-muted">Based in Belgrade, MT • Reach out for custom orders</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-3">
-                    <a href="tel:14066402771" class="card p-4 text-center contact-card h-100">
-                        <i class="fas fa-phone text-brand fs-2 mb-3"></i>
-                        <h5 class="text-dark">Call Us</h5>
-                        <p class="text-muted mb-0">(406) 640-2771</p>
-                    </a>
+            <div class="row g-4 text-center justify-content-center">
+                <div class="col-md-4">
+                    <div class="card p-5 contact-card h-100">
+                        <i class="fab fa-instagram social-icon"></i>
+                        <h4 class="fw-bold">Instagram</h4>
+                        <a href="https://www.instagram.com/406.nation/" target="_blank" class="stretched-link text-decoration-none text-muted">@406.nation</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="mailto:406NATIONMT@gmail.com" class="card p-4 text-center contact-card h-100">
-                        <i class="fas fa-envelope text-brand fs-2 mb-3"></i>
-                        <h5 class="text-dark">Email</h5>
-                        <p class="text-muted mb-0">406NATIONMT@gmail.com</p>
-                    </a>
+                <div class="col-md-4">
+                    <div class="card p-5 contact-card h-100">
+                        <i class="fab fa-facebook social-icon"></i>
+                        <h4 class="fw-bold">Facebook</h4>
+                        <a href="https://www.facebook.com/profile.php?id=61552548401646" target="_blank" class="stretched-link text-decoration-none text-muted">406 Nation</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <a href="https://www.instagram.com/406.nation/" target="_blank" class="card p-4 text-center contact-card h-100">
-                        <i class="fab fa-instagram text-brand fs-2 mb-3"></i>
-                        <h5 class="text-dark">Instagram</h5>
-                        <p class="text-muted mb-0">@406.nation</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://www.facebook.com/profile.php?id=61552548401646" target="_blank" class="card p-4 text-center contact-card h-100">
-                        <i class="fab fa-facebook text-brand fs-2 mb-3"></i>
-                        <h5 class="text-dark">Facebook</h5>
-                        <p class="text-muted mb-0">406 Nation</p>
-                    </a>
+                <div class="col-md-4">
+                    <div class="card p-5 contact-card h-100">
+                        <i class="fas fa-envelope social-icon"></i>
+                        <h4 class="fw-bold">Email</h4>
+                        <a href="mailto:info@406nation.com" class="stretched-link text-decoration-none text-muted">Send an Inquiry</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,12 +164,8 @@
 
     <footer class="text-center">
         <div class="container">
-            <h4 class="fw-bold mb-4">406 NATION</h4>
-            <div class="mb-4">
-                <a href="tel:14066402771" class="mx-3"><i class="fas fa-phone me-2"></i>(406) 640-2771</a>
-                <a href="mailto:406NATIONMT@gmail.com" class="mx-3"><i class="fas fa-envelope me-2"></i>406NATIONMT@gmail.com</a>
-            </div>
-            <p class="small opacity-50">&copy; 2026 406 Nation | Belgrade, Montana</p>
+            <img src="logo-nav.png" alt="406 Nation" style="height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+            <p class="small opacity-50">&copy; 2026 406 Nation. Belgrade, Montana.<br>Unity • Pride • Collaboration</p>
         </div>
     </footer>
 
