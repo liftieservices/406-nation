@@ -3,181 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>406 Nation | Belgrade MT Custom Apparel & Logo Design</title>
-    <meta name="description" content="Belgrade's home for Panther Pride gear, custom business apparel, and logo design. Family-owned since 2007. We specialize in hats, tumblers, and printing.">
-    <meta name="keywords" content="Belgrade MT Custom Shirts, Panther Pride Merchandise, Logo Design Belgrade, 406 Nation, Custom Embroidery Montana">
-
+    <title>406 Nation | Montana Bound</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         :root {
-            --brand-main: #20383f;
-            --brand-accent: #d4a373;
+            --brand-main: #20383f; /* Your Logo Color */
+            --brand-accent: #d4a373; /* Complementary Wheat/Gold */
             --brand-light: #f8f9fa;
         }
 
-        body { font-family: 'Inter', sans-serif; color: #333; scroll-behavior: smooth; }
-        
-        /* Nav Styling */
-        .navbar { background-color: var(--brand-main) !important; padding: 0.8rem 0; }
-        .navbar-brand img { height: 55px; width: auto; }
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            color: #333;
+        }
 
-        /* Hero Section with Large Animated Logo */
+        /* Branding Colors */
+        .bg-brand { background-color: var(--brand-main) !important; }
+        .text-brand { color: var(--brand-main) !important; }
+        .btn-brand { 
+            background-color: var(--brand-main); 
+            color: white; 
+            border: none;
+            padding: 0.8rem 2rem;
+            transition: 0.3s;
+        }
+        .btn-brand:hover { 
+            background-color: #2c4d57; 
+            color: white; 
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
         .hero-section {
-            background: linear-gradient(rgba(32, 56, 63, 0.88), rgba(32, 56, 63, 0.75)), 
-                        url('https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(32, 56, 63, 0.85), rgba(32, 56, 63, 0.7)), 
+                        url('https://images.unsplash.com/photo-1531315630201-bb15abeb1653?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            min-height: 90vh;
+            height: 65vh;
             display: flex;
             align-items: center;
             color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        .hero-logo { 
-            max-width: 580px; /* Large prominence */
-            width: 90%; 
-            margin-bottom: 2rem; 
-            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));
-            animation: float 5s ease-in-out infinite; 
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
         }
 
-        .btn-brand { 
-            background-color: #fff; color: var(--brand-main); 
-            border: none; padding: 15px 40px; font-weight: 700; 
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+        /* Contact Cards */
+        .contact-card {
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
         }
-        .btn-brand:hover { background-color: var(--brand-accent); color: white; transform: scale(1.05); }
-
-        /* Services Section */
-        .service-card {
-            border: none; border-radius: 15px; background: #fff;
-            transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--brand-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .service-icon { font-size: 3rem; color: var(--brand-main); margin-bottom: 20px; }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--brand-light);
+            color: var(--brand-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            font-size: 1.4rem;
+        }
 
-        footer { background: #16262b; color: #fff; padding: 4rem 0; }
+        .section-padding { padding: 80px 0; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo-nav.png" alt="406 Nation Navigation Logo">
-            </a>
+            <a class="navbar-brand fw-bold" href="#">406 NATION</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-bold">
-                    <li class="nav-item"><a class="nav-link px-3" href="#about">Our Story</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#services">What We Do</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header class="hero-section text-center">
         <div class="container">
-            <img src="logo-main.png" alt="406 Nation - Custom Apparel Belgrade MT" class="hero-logo">
-            <div class="mt-3">
-                <h2 class="display-6 fw-bold">Belgrade Born. Community Focused.</h2>
-                <p class="lead mb-5 opacity-85 fs-4">Custom Apparel • Logo Design • Panther Pride</p>
-                <a href="#contact" class="btn btn-brand btn-lg shadow-lg">Start Your Custom Order</a>
-            </div>
+            <h1 class="display-3 fw-bold">THE 406 NATION</h1>
+            <p class="lead mb-4">Community. Culture. Montana.</p>
+            <a href="#contact" class="btn btn-brand shadow-sm">Get Connected</a>
         </div>
     </header>
 
-    <section id="about" class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h6 class="text-uppercase fw-bold text-muted mb-2">Family Owned Since 2007</h6>
-                    <h2 class="display-5 fw-bold text-brand mb-4">Rooted in the Heart of Belgrade</h2>
-                    <p class="lead">We’ve loved watching Belgrade grow and thrive, and we are passionate about giving back to the community that raised our four kids.</p>
-                    <p>In 2023, we saw a gap in local access to school spirit gear. <strong>406 Nation</strong> was born to ensure every Panther fan and local business owner has access to high-quality, professional custom gear right here in town.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-5 rounded-4 shadow-sm" style="background-color: var(--brand-light); border-left: 8px solid var(--brand-main);">
-                        <h4 class="fw-bold mb-3">More Than Just a Shop</h4>
-                        <p class="mb-0 italic">"It's about fostering a spirit of unity, pride, and collaboration within our local area. When you thrive, Belgrade thrives."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-5" style="background-color: #f1f3f4;">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-brand">What We Can Do For You</h2>
-                <p class="text-muted">From family reunions to corporate branding.</p>
-            </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
-                    <div class="card p-5 service-card h-100">
-                        <i class="fas fa-pen-nib service-icon"></i>
-                        <h4 class="fw-bold">Logo Design</h4>
-                        <p class="text-muted small">Need a brand? We create custom logos for small businesses to help you stand out.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-5 service-card h-100">
-                        <i class="fas fa-print service-icon"></i>
-                        <h4 class="fw-bold">Business Apparel</h4>
-                        <p class="text-muted small">Professional printing for your team. Shirts, hoodies, and workwear.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-5 service-card h-100">
-                        <i class="fas fa-glass-teal service-icon"></i> <h4 class="fw-bold">Custom Gear</h4>
-                        <p class="text-muted small">Personalized hats and custom tumblers that reflect your local pride.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5 bg-white">
-        <div class="container py-5">
-            <div class="row g-4 justify-content-center text-center">
-                <div class="col-md-4">
-                    <a href="https://www.instagram.com/406.nation/" target="_blank" class="text-decoration-none text-dark">
-                        <i class="fab fa-instagram fs-1 text-brand mb-3"></i>
-                        <h5 class="fw-bold">Instagram</h5>
-                        <p>@406.nation</p>
-                    </a>
-                </div>
-                <div class="col-md-4 border-start border-end">
-                    <a href="https://www.facebook.com/profile.php?id=61552548401646" target="_blank" class="text-decoration-none text-dark">
-                        <i class="fab fa-facebook fs-1 text-brand mb-3"></i>
-                        <h5 class="fw-bold">Facebook</h5>
-                        <p>406 Nation</p>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-envelope fs-1 text-brand mb-3"></i>
-                    <h5 class="fw-bold">Email Us</h5>
-                    <p>Request a custom quote today!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center">
+    <section id="about" class="section-padding">
         <div class="container">
-            <img src="logo-nav.png" alt="406 Nation" style="height: 45px; margin-bottom: 25px; filter: brightness(0) invert(1);">
-            <p class="mb-0 small fw-bold text-uppercase" style="letter-spacing: 2px;">Belgrade, Montana • Est. 2024</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="fw-bold mb-3 text-brand">Rooted in the Big Sky</h2>
+                    <p class="text-muted">406 Nation is more than a name—it's a gathering place for those who call Montana home. We represent the lifestyle, the people, and the shared values that make the 406 area code a badge of honor.</p>
+                    <p>From the peaks to the plains, we are dedicated to keeping the spirit of the Treasure State alive and connected.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="p-5 rounded" style="background-color: var(--brand-light); border: 2px dashed #20383f;">
+                        <h3 class="text-brand fw-bold mb-0">YOUR LOGO HERE</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-brand">Join the Nation</h2>
+                <p class="text-muted">Reach out or follow us on social media.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card h-100 p-4 text-center contact-card">
+                        <div class="icon-circle"><i class="fab fa-facebook-f"></i></div>
+                        <h5 class="fw-bold">Facebook</h5>
+                        <a href="https://www.facebook.com/profile.php?id=61552548401646" target="_blank" class="stretched-link text-decoration-none text-muted">Visit Page</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4 text-center contact-card">
+                        <div class="icon-circle"><i class="fab fa-instagram"></i></div>
+                        <h5 class="fw-bold">Instagram</h5>
+                        <a href="#" class="stretched-link text-decoration-none text-muted">@406Nation</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4 text-center contact-card">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <h5 class="fw-bold">Email</h5>
+                        <a href="mailto:info@406nation.com" class="stretched-link text-decoration-none text-muted">Email Us</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4 text-center contact-card">
+                        <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                        <h5 class="fw-bold">Phone</h5>
+                        <a href="tel:4061234567" class="stretched-link text-decoration-none text-muted">(406) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand py-4 text-center text-white-50">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 406 Nation. All rights reserved.</p>
         </div>
     </footer>
 
